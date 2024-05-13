@@ -1,0 +1,59 @@
+###GET average rating
+GET http://localhost:8081/api/rating/mines/average
+Accept: application/json
+
+###GET Rating on name
+GET http://localhost:8081/api/rating/mines/vanya
+Accept: application/json
+
+###POST RatingVanya
+POST http://localhost:8081/api/rating
+Content-Type: application/json
+
+{
+  "game": "mines",
+  "player": "vanya",
+  "ratedOn": "2019-03-25T12:40:33",
+  "rating": 13
+}
+
+###POST RatingMax
+POST http://localhost:8081/api/rating
+Content-Type: application/json
+
+{
+  "game": "mines",
+  "player": "max",
+  "ratedOn": "2019-03-25T12:40:33",
+  "rating": 13
+}
+
+###GET Comments
+GET http://localhost:8081/api/comment/mines
+Accept: application/json
+
+###POST Comment
+POST http://localhost:8081/api/comment
+Content-Type: application/json
+
+{
+  "comment": "agittis magna, at condimentum nunc tellus sed mi. Integer tincidunt varius magna a malesuada. Morbi euismod quam quis est scelerisque, sit amet consectetur to faucibus eu.",
+  "commentedOn": "2019-03-25T12:40:33",
+  "game": "nonogram",
+  "player": "vanya"
+}
+
+###GET Score
+GET http://localhost:8081/api/score/mines
+Accept: application/json
+
+###POST Score
+POST http://localhost:8081/api/score
+Content-Type: application/json
+
+{
+  "game": "mines",
+  "player": "betar",
+  "points": 100,
+  "playedOn": "2019-03-25T12:40:33"
+}
